@@ -14,6 +14,7 @@ public class CapsuleControl : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
+ 
         {
 transform.position += Vector3.back*Time.deltaTime;
         }
