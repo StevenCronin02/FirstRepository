@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
+private float Yaw;
 {
    float rightrotationspeed = 180;
     float leftrotationspeed = -180;
@@ -35,6 +36,9 @@ public class Movement : MonoBehaviour
         }
         velocity += acceleration * Time.deltaTime;
         transform.position += velocity * Time.deltaTime;
+
+        // yaw, pitch, roll
+        Yaw += horizontalInput * Yawamount * Time.deltatime;
 
     }
 }
